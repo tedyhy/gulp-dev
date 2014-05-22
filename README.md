@@ -1,6 +1,7 @@
 # [gulp](https://github.com/wearefractal/gulp)-dev
 
-> Create html files for development and production from a template file
+> Toggle html comments so that you can enable functionality for dev vs.
+> production.
 
 Have you ever wanted to test your web page and you smartly (for the most
 part!) used appcache and forgot to update your manifest.appcache file?!
@@ -25,7 +26,12 @@ would not be there in production?  Well, gulp-dev will help you there.
 **Into this for development**
 
 ```html
+<!-- !dev -->
+<!-- <html manifest="manifest.appcache"> -->
+<!-- /!dev -->
+<!-- dev -->
 <html>
+<!-- /dev -->
   <head><title>My Page</title></head>
   <body>
     <h1>Hello World!</h1>
@@ -36,7 +42,12 @@ would not be there in production?  Well, gulp-dev will help you there.
 **Or into this for production**
 
 ```html
+<!-- !dev -->
 <html manifest="manifest.appcache">
+<!-- /!dev -->
+<!-- dev -->
+<!-- <html> -->
+<!-- /dev -->
   <head><title>My Page</title></head>
   <body>
     <h1>Hello World!</h1>

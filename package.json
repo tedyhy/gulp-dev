@@ -1,7 +1,7 @@
 {
   "name": "gulp-dev",
-  "version": "0.0.1",
-  "description": "Allows you to add have certain pieces of your html used for development vs. production",
+  "version": "0.0.2",
+  "description": "Toggle html comments so that you can enable functionality for dev vs. production.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ryanolsonx/gulp-dev"

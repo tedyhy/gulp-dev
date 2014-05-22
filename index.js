@@ -32,13 +32,13 @@ function processFileContents(fileContents, inDevelopmentMode) {
     data,
     '<!-- dev -->',
     '<!-- /dev -->',
-    /* removeContentsInBlock */ !inDevelopmentMode);
+    /* commentOutContentsInBlock */ !inDevelopmentMode);
 
   data = processFileContentsForBlock(
     data,
     '<!-- !dev -->',
     '<!-- /!dev -->',
-    /* removeContentsInBlock */ inDevelopmentMode);
+    /* commentOutContentsInBlock */ inDevelopmentMode);
 
   return new Buffer(data);
 }
@@ -47,13 +47,12 @@ function processFileContentsForBlock(
   fileContents,
   startBlockComment,
   endBlockComment,
-  removeContentsInBlock) {
+  commentOutContentsInBlock) {
   var i;
 
   var stripHtmlCommentRegex = /<!--(.*)-->/;
 
   var inBlock = false;
-  var indexesOfLinesToRemove = [];
   var lines = fileContents.split('\n');
 
   for(i = 0; i < lines.length; i++) {
@@ -64,27 +63,21 @@ function processFileContentsForBlock(
     }
 
     if(inBlock) {
-      if(!removeContentsInBlock) {
-        var match = line.match(stripHtmlCommentRegex);
+      var match = line.match(stripHtmlCommentRegex);
+      if(!commentOutContentsInBlock) {
         if(match) {
           lines[i] = match[1].trim();
         }
       } else {
-        indexesOfLinesToRemove.push(i);
+        if(!match) { //if isn't already commented out
+          lines[i] = '<!-- {0} -->'.replace('{0}', line);
+        }
       }
     }
 
     if(line === startBlockComment || line === endBlockComment) {
-      indexesOfLinesToRemove.push(i);
       inBlock = line === startBlockComment;
     }
-  }
-
-  //remove block comments
-  var amountRemoved = 0;
-  for(i = 0; i < indexesOfLinesToRemove.length; i++) {
-    var index = indexesOfLinesToRemove[i];
-    lines.splice(index - amountRemoved++, 1);
   }
 
   return lines.join('\n');
