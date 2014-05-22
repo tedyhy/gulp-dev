@@ -2,6 +2,12 @@
   "name": "gulp-dev",
   "version": "0.0.1",
   "description": "Allows you to add have certain pieces of your html used for development vs. production",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanolsonx/gulp-dev"
+  },
+  "homepage": "https://github.com/ryanolsonx/gulp-dev",
+  "bugs": "https://github.com/ryanolsonx/gulp-dev/issues",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -13,7 +19,10 @@
     "development",
     "stream"
   ],
-  "author": "Ryan Olson <ryan.olson.x@gmail.com>",
+  "author": {
+    "name": "Ryan Olson",
+    "email": "ryan.olson.x@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "through2": "^0.4.1",
