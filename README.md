@@ -54,7 +54,6 @@ var dev = require('gulp-dev');
 gulp.task('dev', function() {
   gulp.src('home.html')
       .pipe(dev(true))
-      .pipe(dev())
       .pipe(gulp.dest('index.html'));
 });
 ```
@@ -66,7 +65,6 @@ var dev = require('gulp-dev');
 gulp.task('dev', function() {
   gulp.src('home.html')
       .pipe(dev(false))
-      .pipe(dev())
       .pipe(gulp.dest('public/index.html'));
 });
 ```
