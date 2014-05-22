@@ -7,7 +7,7 @@ part!) used appcache and forgot to update your manifest.appcache file?!
 Have you ever wanted to include javascript files for development that
 would not be there in production?  Well, gulp-dev will help you there.
 
-** Turn this:**
+**Turn this:**
 ```html
 <!-- !dev -->
 <html manifest="manifest.appcache">
@@ -22,7 +22,7 @@ would not be there in production?  Well, gulp-dev will help you there.
 </html>
 ```
 
-** Into this for development **
+**Into this for development**
 
 ```html
 <html>
@@ -33,7 +33,7 @@ would not be there in production?  Well, gulp-dev will help you there.
 </html>
 ```
 
-** Or into this for production **
+**Or into this for production**
 
 ```html
 <html manifest="manifest.appcache">
@@ -46,7 +46,7 @@ would not be there in production?  Well, gulp-dev will help you there.
 
 ## Example Usage with Gulp
 
-** Development Task **
+**Development Task**
 ```js
 var gulp = require('gulp');
 var dev = require('gulp-dev');
@@ -58,7 +58,7 @@ gulp.task('dev', function() {
       .pipe(gulp.dest('index.html'));
 });
 ```
-** Default Task (for prod) **
+**Default Task (for prod)**
 ```js
 var gulp = require('gulp');
 var dev = require('gulp-dev');
