@@ -1,0 +1,21 @@
+{
+  "name": "gulp-dev",
+  "version": "0.0.1",
+  "description": "a node module that allows you to add have certain pieces of your html used for development vs. production",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "development",
+    "stream"
+  ],
+  "author": "Ryan Olson <ryan.olson.x@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "through": "^2.3.4",
+    "gulp-util": "^2.2.14"
+  }
+}
