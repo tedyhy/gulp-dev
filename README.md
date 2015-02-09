@@ -73,7 +73,7 @@ gulp.task('dev', function() {
 var gulp = require('gulp');
 var dev = require('gulp-dev');
 
-gulp.task('dev', function() {
+gulp.task('prod', function() {
   gulp.src('home.html')
       .pipe(dev(false))
       .pipe(gulp.dest('public/index.html'));
