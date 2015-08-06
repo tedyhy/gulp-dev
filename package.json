@@ -1,6 +1,6 @@
 {
   "name": "gulp-dev",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Toggle html comments so that you can enable functionality for dev vs. production.",
   "repository": {
     "type": "git",
