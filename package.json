@@ -23,7 +23,7 @@
     "name": "Ryan Olson",
     "email": "ryan.olson.x@gmail.com"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "dependencies": {
     "through2": "^0.4.1",
     "gulp-util": "^2.2.14"

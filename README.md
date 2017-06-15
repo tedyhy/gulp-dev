@@ -89,4 +89,9 @@ and what to remove.
 
 ## License
 
-see LICENSE.
+Copyright (c) 2017 Ryan Olson
+
+GNU GENERAL PUBLIC LICENSE
+    Version 3, 29 June 2007
+
+See LICENSE for more information.
